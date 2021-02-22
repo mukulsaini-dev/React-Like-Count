@@ -3,7 +3,10 @@ import "./styles.css";
 
 export default function App() {
   const [LikeCounter , setLikeCounter]=useState(0)
-
+const style ={
+backgroundColor:'black',
+color:'white'
+}
 function incLikeCounter (){
  var newLikeCounter =LikeCounter+1;
  setLikeCounter(newLikeCounter); 
@@ -15,10 +18,10 @@ setLikeCounter(newLikeCounter)
  }
   return (
     <div className="App">
-      <h1>Like Count App</h1>
+      <h1>Like Count</h1>
       <h2> {LikeCounter} </h2>
-      <button onClick={incLikeCounter}>+</button>
-      <button onClick={decLikeCounter}>-</button>
+      <button style={style}onClick={incLikeCounter}>+</button>
+      <button style={style}onClick={decLikeCounter}>-</button>
     </div>
   );
 }
